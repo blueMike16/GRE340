@@ -1,0 +1,91 @@
+{
+	"env": {
+		"es2020": true,
+		"es6": true,
+		"node": true,
+		"mocha": true,
+		"jest": true
+	},
+	"plugins": [
+		"import",
+		"jsx-a11y",
+		"cypress",
+ 		"react",
+		"react-hooks",
+		"promise",
+		"require-in-package",
+		"prettier"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+    	"plugin:array-func/recommended",
+		"prettier"
+	],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": "latest",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"require-in-package/require-in-package": 2,
+		"promise/always-return": "error",
+		"promise/no-return-wrap": "error",
+		"promise/param-names": "error",
+		"promise/catch-or-return": [
+			"error",
+			{ "terminationMethod": ["catch", "finally"] }
+		],
+		"promise/no-native": "off",
+		"promise/no-nesting": "warn",
+		"promise/no-promise-in-callback": "warn",
+		"promise/no-callback-in-promise": "off",
+		"promise/avoid-new": "off",
+		"promise/no-new-statics": "error",
+		"promise/no-return-in-finally": "warn",
+		"promise/valid-params": "warn",
+		"no-empty": [
+			0,
+			{
+				"allowEmptyCatch": [
+					true
+				]
+			}
+		],
+		"no-unused-vars": 0,
+		"no-console": 0,
+		"no-useless-catch": 0,
+		"no-var": [
+			"error"
+		],
+		"prefer-const": [
+			"error"
+		],
+		"prettier/prettier": "error",
+   		"arrow-body-style": "off",
+   		"prefer-arrow-callback": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/prop-types": [2, { "skipUndeclared": true }],
+		"import/no-named-as-default": 0,
+		"no-shadow": "off",
+		"no-unused-expressions": ["error", { "allowTernary": true, "allowShortCircuit": true }],
+		"global-require": 0,
+		"react/react-in-jsx-scope": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"alias": {
+			"extensions": [".js", ".jsx"],
+			"map": [
+				["@", "."]
+			]
+			}
+		}
+	}
+}
